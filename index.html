@@ -33,10 +33,14 @@
           <input type="text" class="searchResults" ng-model="searchText" ng-change="getData()" placeholder="Search Music"></input>
           <span class="postfix"></span>
           <article class="results">
-            <div ng-repeat="song in songs | filter:searchText" class="item">
-              <span class="playButton" ng-click="parseURItoURL(song.url)">play button</span>
-              <span class="songNames">{{song.songname}}</span>
-              <span class="artistName">{{song.artistname}}</span>
+            <div ng-repeat="song in songs | filter:searchText" class="item row">
+               <div class="small-2 columns"> 
+                <span class="playButton" ng-click="parseURItoURL(song.url)">play button</span>
+               </div>
+               <div class="small-10 columns"> 
+                <span class="songNames">{{song.songname}}</span>
+                <span class="artistName">{{song.artistname}}</span>
+              </div>
             </div>
           </article>
       </div>
