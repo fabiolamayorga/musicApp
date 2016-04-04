@@ -1,0 +1,99 @@
+//FONTS
+
+@font-face {
+    font-family: 'sameButDifferent';
+    src: url('fonts/SameSameButDifferent.ttf') format('ttf');
+}
+
+::-webkit-input-placeholder {
+   color: #fff;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #fff;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #fff;
+}
+
+:-ms-input-placeholder {  
+   color: #fff;
+}
+
+.main{
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#0098b4+0,045c7a+100 */
+	background: #0098b4; /* Old browsers */
+	background: -moz-radial-gradient(center, ellipse cover,  #0098b4 0%, #045c7a 100%); /* FF3.6-15 */
+	background: -webkit-radial-gradient(center, ellipse cover,  #0098b4 0%,#045c7a 100%); /* Chrome10-25,Safari5.1-6 */
+	background: radial-gradient(ellipse at center,  #0098b4 0%,#045c7a 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0098b4', endColorstr='#045c7a',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	min-height: 1000px;
+}
+
+header {
+	border-top: 3px solid #fff273;
+}
+
+header h1{
+	font-family: 'sameButDifferent';
+	color: #fff;
+}
+
+header ul{
+	list-style: none;
+	float: right;
+	line-height: 11px;
+
+}
+
+header ul li{
+	display: inline-block;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fff070+0,fcb91e+100 */
+	background: #fff070; /* Old browsers */
+	background: -moz-linear-gradient(top,  #fff070 0%, #fcb91e 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  #fff070 0%,#fcb91e 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  #fff070 0%,#fcb91e 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fff070', endColorstr='#fcb91e',GradientType=0 ); /* IE6-9 */
+    color: #000;
+    border-bottom-left-radius: 18px;
+    border-bottom-right-radius: 18px;
+    padding: 0.3em 2em;
+    font-family: Arial;
+    font-size: 11px;
+}
+
+.searchResults{
+	background:rgba(3,100,130,0.9);
+    border: 0;
+    border-radius: 22px;
+    font-family: Arial;
+    width: 60%;
+    margin: 0 auto;
+    padding-left: 23px;
+}
+
+.results{
+	width: 50%;
+	margin: 0 auto;
+}
+
+.results .item{
+	background: rgba(128, 205, 219, 0.9);
+    margin: 2px;
+    padding: 0.8em 1.5em;
+}
+
+.results .item:nth-of-type(even){
+	background: rgba(77, 184, 203, 0.9);
+}
+
+.results .item .playButton{
+	text-indent: -99999px;
+	background: url("../images/playButton.png");
+	display: inline-block;
+    width: 29px;
+    height: 29px;
+    margin-right: 7px;
+    cursor: pointer;
+}

@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Music App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="styles/foundation-6.2.0-essential/css/foundation.min.css">
+    <link href="styles/main.css" rel="stylesheet" />
+
+    <!-- Include the AngularJS library -->
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+    <!-- Modules -->
+    <script src="js/musicApp.js"></script>
+   <!-- Controllers -->
+    <script src="js/controllers/mainController.js"></script>
+
+    <!-- Services -->
+    <script src="js/services/songs.js"></script>
+
+  </head>
+  <body ng-app="musicApp">
+    <div class="main" ng-controller="mainController">
+      <header>
+          <nav class="row">
+            <ul>
+              <li>Now Playing</li>
+              <li>Rate Songs</li>
+            </ul>
+          </nav>
+          <h1>Hangar O'clock Songs</h1>
+
+      </header>
+      <div class="row">
+          <input type="text" class="searchResults" ng-model="searchText" ng-change="getData()" placeholder="Search Music"></input>
+          <span class="postfix"></span>
+          <article class="results">
+            <div ng-repeat="song in songs | filter:searchText" class="item">
+              <span class="playButton" ng-click="parseURItoURL(song.url)">play button</span>
+              <span class="songNames">{{song.songname}}</span>
+              <span class="artistName">{{song.artistname}}</span>
+            </div>
+          </article>
+      </div>
+    </div>
+
+
+  </body>
+</html>
